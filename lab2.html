@@ -1,0 +1,335 @@
+<!--
+  Project: One-Page Portfolio Website (Lab Assignment 2)
+  Page: index.html
+  Author: vijaya saxena
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | vijaya saxena</title>
+  <!-- External CSS Link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>vijaya saxena</h1>
+    <p>Student • Web Developer • Tech Enthusiast</p>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Explore my projects, skills, and ways to connect with me.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile.jpeg" height="150" width="150"="Profile photo of vijaya saxena " class="profile">
+      <p>Hello! i am vijaya saxena , a passionate web development student who enjoys creating simple and responsive web pages using HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+    
+        <li><strong>Portfolio Website:</strong> My personal site created with HTML and CSS.</li>
+        <li><strong>Todo List:</strong> A simple app to manage tasks effectively.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>HTML</td><td>Advanced</td></tr>
+          <tr><td>CSS</td><td>Intermediate</td></tr>
+          <tr><td>JavaScript</td><td>Beginner</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="back-to-top">↑ Top</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 vijaya saxena r. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const topBtn = document.getElementById("back-to-top");
+    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  </script>
+</body>
+</html>
+
+
+/* =========================================================
+   Project: One-Page Portfolio Website
+   Author: vijaya saxena 
+   File: style.css
+   Description: External CSS for Lab Assignment 2
+   ========================================================= */
+
+/* --------- Global Reset --------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------- Body Styles --------- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* --------- Header Section --------- */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* --------- Hero Section --------- */
+.hero {
+  background: #e9ecef;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* --------- About Section --------- */
+#about {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile {
+  width: 50px;
+  border-radius: 50%;
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --------- Project Section --------- */
+#projects {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects ul {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: disc;
+  line-height: 1.8;
+}
+
+/* --------- Skills Section --------- */
+#skills {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* --------- Contact Section --------- */
+#contact {
+  padding: 50px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* --------- Footer --------- */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* --------- Accessibility: Skip Link --------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* --------- Spacing Between Sections --------- */
+section {
+  margin-bottom: 50px;
+}
+
+/* --------- Box Model Enhancements --------- */
+section, header, footer {
+  border: none;
+  padding: 20px;
+}
+
+/* --------- Hover & Interaction Enhancements --------- */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* --------- Optional Back to Top Button --------- */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+#back-to-top:hover {
+  background: #d90429;
+}
